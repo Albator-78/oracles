@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Les Oracles | Yi King • Wirth • Tarot</title>
+
+  <meta
+    name="description"
+    content="Découvrez trois expériences divinatoires : Yi King, Oracle Wirth et Tarot."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #080711;
+      --card: rgba(20, 16, 35, 0.72);
+      --gold: #d9b86c;
+      --gold-light: #f3dda0;
+      --text: #f4f0e8;
+      --muted: #aaa1b5;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% 10%, #29203c 0, transparent 35%),
+        radial-gradient(circle at 10% 80%, #151b34 0, transparent 30%),
+        var(--bg);
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+
+    .symbol {
+      color: var(--gold);
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 400;
+      letter-spacing: .12em;
+      color: var(--gold-light);
+    }
+
+    header p {
+      max-width: 650px;
+      margin: 20px auto 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    main {
+      width: min(1150px, 92%);
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    .oracles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 25px 0 70px;
+    }
+
+    .card {
+      position: relative;
+      min-height: 390px;
+      padding: 38px 30px;
+      border: 1px solid rgba(217, 184, 108, .28);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.01)
+        ),
+        var(--card);
+
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      backdrop-filter: blur(12px);
+
+      transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    }
+
+    .card-icon {
+      height: 105px;
+      display: grid;
+      place-items: center;
+
+      font-size: 4rem;
+      color: var(--gold);
+    }
+
+    .card h2 {
+      margin-top: 15px;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--gold-light);
+      letter-spacing: .06em;
+    }
+
+    .card p {
+      margin: 20px 0 30px;
+      color: var(--muted);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+
+      padding: 14px 22px;
+
+      border: 1px solid var(--gold);
+      border-radius: 50px;
+
+      color: #100e16;
+      background: linear-gradient(
+        90deg,
+        #b99348,
+        #ecd58d,
+        #b99348
+      );
+
+      font-family: Arial, sans-serif;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+
+      transition: .25s ease;
+    }
+
+    .btn:hover {
+      color: white;
+      background: transparent;
+      box-shadow: 0 0 25px rgba(217,184,108,.22);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #716b79;
+      font-family: Arial, sans-serif;
+      font-size: .8rem;
+      border-top: 1px solid rgba(255,255,255,.05);
+    }
+
+    @media (max-width: 850px) {
+      .oracles {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: 330px;
+      }
+
+      header {
+        padding-top: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <header>
+    <div class="symbol">✦ ☾ ✦</div>
+
+    <h1>LES ORACLES</h1>
+
+    <p>
+      Trois chemins, trois traditions.
+      Choisissez votre oracle et laissez les symboles
+      éclairer votre réflexion.
+    </p>
+  </header>
+
+
+  <main>
+
+    <section class="oracles">
+
+      <!-- YI KING -->
+      <article class="card">
+
+        <div class="card-icon">☯</div>
+
+        <h2>Yi King</h2>
+
+        <p>
+          Entrez dans l'univers du Yi King
+          et de ses hexagrammes.
+        </p>
+
+        <a
+          class="btn"
+          href="https://Albator-78.github.io/oracle-complet-yiking/"
+        >
+          Consulter le Yi King
+        </a>
+
+      </article>
+
+
+      <!-- WIRTH -->
+      <article class="card">
+
+        <div class="card-icon">✧</div>
+
+        <h2>Oracle Wirth</h2>
+
+        <p>
+          Découvrez l'oracle Wirth
+          et son langage symbolique.
+        </p>
+
+        <a
+          class="btn"
+          href="https://Albator-78.github.io/oracle-wirth/"
+        >
+          Ouvrir l'oracle
+        </a>
+
+      </article>
+
+
+      <!-- TAROT -->
+      <article class="card">
+
+        <div class="card-icon">☾</div>
+
+        <h2>Tarot</h2>
+
+        <p>
+          Explorez les cartes et leurs symboles
+          à travers votre application Tarot.
+        </p>
+
+        <a
+          class="btn"
+          href="https://Albator-78.github.io/Krates98-tarot/"
+        >
+          Tirer les cartes
+        </a>
+
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    Les Oracles • Expérience numérique
+  </footer>
+
+</div>
+
+</body>
+</html>
